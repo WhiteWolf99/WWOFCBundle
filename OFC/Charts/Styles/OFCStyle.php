@@ -10,7 +10,7 @@ namespace WW\OFCBundle\OFC\Charts\Styles;
 class OFCStyle
 {
   private $value;
-  private $color;
+  private $colour;
   private $x;
   private $y;
   private $tip;
@@ -62,7 +62,7 @@ class OFCStyle
    */
   public function setColor($color)
   {
-    $this->color = $color;
+    $this->colour = $color;
     
     return $this;
   }
