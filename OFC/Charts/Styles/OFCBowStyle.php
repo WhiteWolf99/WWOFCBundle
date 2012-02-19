@@ -11,7 +11,7 @@ use WW\OFCBundle\OFC\Charts\Styles\OFCStyle;
  */
 class OFCBowStyle extends OFCStyle
 {
-  private $rotation;
+  public $rotation;
   
   function __construct($value = null)
   {

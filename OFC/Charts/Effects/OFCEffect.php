@@ -9,7 +9,7 @@ namespace WW\OFCBundle\OFC\Charts\Effects;
  */
 class OFCEffect {
   
-  protected $type;
-  protected $cascade;
-  protected $delay;
+  public $type;
+  public $cascade;
+  public $delay;
 }

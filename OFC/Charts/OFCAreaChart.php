@@ -11,9 +11,9 @@ use WW\OFCBundle\OFC\Charts\OFCLineChart;
  */
 class OFCAreaChart extends OFCLineChart
 {
-  protected $fill_alpha;
-  private $fill;
-  private $loop;
+  public $fill_alpha;
+  public $fill;
+  public $loop;
   
   public function __construct()
   {

@@ -11,12 +11,12 @@ use WW\OFCBundle\OFC\Charts\OFChart;
  */
 class OFCScatterChart extends OFChart
 {
-  protected $type;
-  private $colour;
-  private $values = array();
-  private $dot_size;
-  private $dot_style;
-  private $tip;
+  public $type;
+  public $colour;
+  public $values = array();
+  public $dot_size;
+  public $dot_style;
+  public $tip;
   
   
   public function __construct($color, $dot_size)

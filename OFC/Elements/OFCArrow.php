@@ -11,11 +11,11 @@ namespace WW\OFCBundle\OFC\Elements;
 class OFCArrow
 {
 
-  private $type;
-  private $start;
-  private $end;
-  private $colour;
-  private $barb_length;
+  public $type;
+  public $start;
+  public $end;
+  public $colour;
+  public $barb_length;
 
   /**
    * @param int $x Start x position

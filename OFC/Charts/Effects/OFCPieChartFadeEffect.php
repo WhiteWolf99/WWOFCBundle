@@ -9,7 +9,7 @@ namespace WW\OFCBundle\OFC\Charts\Effects;
  */
 class OFCPieChartFadeEffect
 {
-  private $type;
+  public $type;
   
   public function __construct()
   {

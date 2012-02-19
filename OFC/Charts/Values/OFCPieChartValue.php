@@ -9,14 +9,14 @@ namespace WW\OFCBundle\OFC\Charts\Values;
  */
 class OFCPieChartValue
 {
-  private $value;
-  private $label;
-  private $colour;
-  private $label_colour;
-  private $font_size;
-  private $tip;
-  private $animate = array();
-  private $on_lick;
+  public $value;
+  public $label;
+  public $colour;
+  public $label_colour;
+  public $font_size;
+  public $tip;
+  public $animate = array();
+  public $on_click;
   
   public function __construct($value, $label)
 	{
@@ -74,7 +74,7 @@ class OFCPieChartValue
    */
 	public function onClick($event)
 	{
-		$this->on_lick = $event;
+		$this->on_click = $event;
     
     return $this;
 	}

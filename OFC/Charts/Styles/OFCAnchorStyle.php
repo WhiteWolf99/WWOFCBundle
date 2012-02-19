@@ -11,8 +11,8 @@ use WW\OFCBundle\OFC\Charts\Styles\OFCStyle;
  */
 class OFCAnchorStyle extends OFCStyle
 {
-  private $rotation;
-  private $sides;
+  public $rotation;
+  public $sides;
   
   function __construct($value = null)
   {

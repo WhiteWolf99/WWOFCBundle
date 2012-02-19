@@ -9,9 +9,9 @@ namespace WW\OFCBundle\OFC\Charts\Values;
  */
 class OFCScatterChartValue
 {
-  private $x;
-  private $y;
-  private $dot_size;
+  public $x;
+  public $y;
+  public $dot_size;
   
   function __construct($x, $y, $dot_size=-1)
     {

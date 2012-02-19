@@ -9,10 +9,10 @@ namespace WW\OFCBundle\OFC\Charts\Values;
  */
 class OFCBarChartValue
 {
-  private $top;
-  private $bottom = null;
-  private $colour;
-  private $tip;
+  public $top;
+  public $bottom = null;
+  public $colour;
+  public $tip;
   
   function __construct($top, $bottom=null)
   {

@@ -11,7 +11,7 @@ use WW\OFCBundle\OFC\Elements\OFCLabel;
  */
 class OFCYLabel extends OFCLabel
 {
-  private $y;
+  public $y;
   
   public function __construct($y, $text)
   {

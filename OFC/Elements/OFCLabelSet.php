@@ -9,11 +9,11 @@ namespace WW\OFCBundle\OFC\Elements;
  */
 class OFCLabelSet
 {
-  private $steps;
-  private $rotate;
-  private $colour;
-  private $size;
-  private $labels = array();
+  public $steps;
+  public $rotate;
+  public $colour;
+  public $size;
+  public $labels = array();
   
   /**
    * Set the labels size

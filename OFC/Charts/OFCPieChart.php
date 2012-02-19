@@ -13,20 +13,20 @@ use WW\OFCBundle\OFC\Charts\Effects\OFCPieChartFadeEffect;
  */
 class OFCPieChart extends OFChart
 {
-  private $colours;
-  private $alpha;
-  private $border;
-  private $values;
-  private $animate;
-  private $start_angle;
-  private $tip;
-  private $label_colour;
-  private $gradient_fill;  
-  private $no_labels;
-  private $radius;
-  private $on_click;
+  public $colours;
+  public $alpha;
+  public $border;
+  public $values;
+  public $animate;
+  public $start_angle;
+  public $tip;
+  public $label_colour;
+  public $gradient_fill;  
+  public $no_labels;
+  public $radius;
+  public $on_click;
   
-  protected $type;
+  public $type;
   
   public function __construct()
   {

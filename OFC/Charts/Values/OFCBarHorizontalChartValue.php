@@ -12,8 +12,8 @@ use WW\OFCBundle\OFC\Charts\Values\OFCBarChartValue;
 class OFCBarHorizontalChartValue
 {
 
-  private $left;
-  private $right;
+  public $left;
+  public $right;
   
   public function __construct($left, $right)
   {

@@ -11,6 +11,7 @@ use WW\OFCBundle\OFC\Elements\OFCYLabel;
 use WW\OFCBundle\OFC\Elements\OFCLabelSet;
 use WW\OFCBundle\OFC\Elements\OFCShape;
 use WW\OFCBundle\OFC\Elements\OFCTooltip;
+use WW\OFCBundle\OFC\Elements\OFCArrow;
 
 use WW\OFCBundle\OFC\Charts\OFCBarChart;
 use WW\OFCBundle\OFC\Charts\OFCBar3DChart;
@@ -41,6 +42,8 @@ use WW\OFCBundle\OFC\Charts\Values\OFCBarSketchChartValue;
 use WW\OFCBundle\OFC\Charts\Values\OFCScatterChartValue;
 use WW\OFCBundle\OFC\Charts\Values\OFCPieChartValue;
 
+use WW\OFCBundle\OFC\OFCChartContainer;
+
 
 /**
  * Factory class for all elements and charts from OFC
@@ -50,12 +53,22 @@ use WW\OFCBundle\OFC\Charts\Values\OFCPieChartValue;
 class ChartFactory
 {
   
+  /**
+   * Creates a chart container
+   *
+   * @return OFChartContainer 
+   */
+  public function createChartContainer()
+  {
+    return new OFChartContainer();
+  }
+  
    /**
    * Returns an X-Axis element
    * 
    * @return OFCXAxis 
    */
-  public function CreatesXAxis()
+  public function createXAxis()
   {
     return new OFCXAxis();
   }
@@ -65,7 +78,7 @@ class ChartFactory
    * 
    * @return OFCYAxis 
    */
-  public function CreatesYAxis()
+  public function createYAxis()
   {
     return new OFCYAxis();
   }
@@ -76,7 +89,7 @@ class ChartFactory
    * @param string $text
    * @return OFCXLegend 
    */
-  public function CreatesXLegend($text)
+  public function createXLegend($text)
   {
     return new OFCXLegend($text);
   }
@@ -87,7 +100,7 @@ class ChartFactory
    * @param string $text
    * @return OFCXLegend 
    */
-  public function CreatesYLegend($text)
+  public function createYLegend($text)
   {
     return new OFCYLegend($text);
   }
@@ -101,7 +114,7 @@ class ChartFactory
    * @param int $angle
    * @return OFCXLabel 
    */
-  public function CreatesXLabel($text, $color, $size, $angle)
+  public function createXLabel($text, $color, $size, $angle)
   {
     return new OFCXLabel($text, $color, $size, $angle);
   }
@@ -113,7 +126,7 @@ class ChartFactory
    * @param string $text
    * @return OFCYLabel 
    */
-  public function CreatesYLabel($y, $text)
+  public function createYLabel($y, $text)
   {
     return new OFCYLabel($y, $text);
   }
@@ -123,7 +136,7 @@ class ChartFactory
    * 
    * @return OFCLabelSet 
    */
-  public function CreatesLabelSet()
+  public function createLabelSet()
   {
     return new OFCLabelSet();
   }
@@ -134,7 +147,7 @@ class ChartFactory
    * @param string $color HEX HTML color format
    * @return OFCShape
    */
-  public function CreatesShape($color)
+  public function createShape($color)
   {
     return new OFCShape($color);
   }
@@ -144,9 +157,25 @@ class ChartFactory
    * 
    * @return OFCTooltip 
    */
-  public function CreatesTooltip()
+  public function createTooltip()
   {
     return new OFCTooltip();
+  }
+  
+  /**
+   * Creates an arrow element
+   * 
+   * @param int $x Start x position
+   * @param int $y Start y position
+   * @param int $a End x position
+   * @param int $b End y position
+   * @param string $color HTML HEX color format
+   * @param int $barb_length Length of the barbs in pixels.
+   * @return OFCArrow 
+   */
+  public function createArrow($x, $y, $a, $b, $color, $barb_length = 10)
+  {
+    return new OFCArrow($x, $y, $a, $b, $color, $barb_length);
   }
   
   /**
@@ -154,7 +183,7 @@ class ChartFactory
    *
    * @return OFCBarChart 
    */
-  public function CreatesBarChart()
+  public function createBarChart()
   {
     return new OFCBarChart();
   }
@@ -164,7 +193,7 @@ class ChartFactory
    *
    * @return OFCBar3DChart 
    */
-  public function CreatesBar3DChart()
+  public function createBar3DChart()
   {
     return new OFCBar3DChart();
   }
@@ -176,7 +205,7 @@ class ChartFactory
    * @param string $outline_color
    * @return OFCBarFilledChart
    */
-  public function CreatesBarFilledChart($color, $outline_color)
+  public function createBarFilledChart($color, $outline_color)
   {
     return new OFCBarFilledChart($color, $outline_color);
   }
@@ -186,7 +215,7 @@ class ChartFactory
    *
    * @return OFCBarFilledChart
    */
-  public function CreatesBarGlassChart()
+  public function createBarGlassChart()
   {
     return new OFCBarGlassChart();
   }
@@ -196,7 +225,7 @@ class ChartFactory
    * 
    * @return OFCBarHorizontalChart 
    */
-  public function CreatesBarHoriztonalChart()
+  public function createBarHoriztonalChart()
   {
     return new OFCBarHorizontalChart();
   }
@@ -206,7 +235,7 @@ class ChartFactory
    * 
    * @return OFCBarStackChart 
    */
-  public function CreatesBarStackChart()
+  public function createBarStackChart()
   {
     return new OFCBarStackChart();
   }
@@ -219,7 +248,7 @@ class ChartFactory
    * @param int $fun_factor
    * @return OFCBarSketchChart 
    */
-  public function CreatesBarSketchChart($color, $outline_color, $fun_factor)
+  public function createBarSketchChart($color, $outline_color, $fun_factor)
   {
     return new OFCBarSketchChart($color, $outline_color, $fun_factor);
   }
@@ -231,7 +260,7 @@ class ChartFactory
    * @param int $dot_size
    * @return OFCScatterChart 
    */
-  public function CreatesScatterChart($color, $dot_size)
+  public function createScatterChart($color, $dot_size)
   {
     return new OFCScatterChart($color, $dot_size);
   }
@@ -241,7 +270,7 @@ class ChartFactory
    * 
    * @return OFCLineChart 
    */
-  public function CreatesLineChart()
+  public function createLineChart()
   {
     return new OFCLineChart();
   }
@@ -251,7 +280,7 @@ class ChartFactory
    * 
    * @return OFCLineDotChart 
    */
-  public function CreatesLineDotChart()
+  public function createLineDotChart()
   {
     return new OFCLineDotChart();
   }
@@ -261,7 +290,7 @@ class ChartFactory
    * 
    * @return OFCLineHollowChart 
    */
-  public function CreatesLineHollowChart()
+  public function createLineHollowChart()
   {
     return new OFCLineHollowChart();
   }
@@ -271,7 +300,7 @@ class ChartFactory
    * 
    * @return OFCAreaChart 
    */
-  public function CreatesAreaChart()
+  public function createAreaChart()
   {
     return new OFCAreaChart();
   }
@@ -281,7 +310,7 @@ class ChartFactory
    *
    * @return OFCAreaHollowChart 
    */
-  public function CreatesAreaHollowChart()
+  public function createAreaHollowChart()
   {
     return new OFCAreaHollowChart();
   }
@@ -291,7 +320,7 @@ class ChartFactory
    * 
    * @return OFCPieChart 
    */
-  public function CreatesPieChart()
+  public function createPieChart()
   {
     return new OFCPieChart();
   }
@@ -303,20 +332,18 @@ class ChartFactory
    * @param int $bottom (optional)
    * @return OFCBarChartValue 
    */
-  public function CreatesBarChartValue($top, $bottom = null)
+  public function createBarChartValue($top, $bottom = null)
   {
     return new OFCBarChartValue($top, $bottom);
   }
-  
-  
-  
+    
   /**
    * Creates a 3D bar chart value object
    * 
    * @param int $top
    * @return OFCBar3DChartValue 
    */
-  public function CreatesBar3DChartValue($top)
+  public function createBar3DChartValue($top)
   {
     return new OFCBar3DChartValue($top);
   }
@@ -328,7 +355,7 @@ class ChartFactory
    * @param int $bottom
    * @return OFCBarFilledChartValue 
    */
-  public function CreatesBarFilledChartValue($top, $bottom)
+  public function createBarFilledChartValue($top, $bottom)
   {
     return new OFCBarFilledChartValue($top, $bottom);
   }
@@ -339,7 +366,7 @@ class ChartFactory
    * @param  int$top
    * @return OFCBarGlassChartValue 
    */
-  public function CreatesBarGlassChartValue($top)
+  public function createBarGlassChartValue($top)
   {
     return new OFCBarGlassChartValue($top);
   }
@@ -351,7 +378,7 @@ class ChartFactory
    * @param  int $right
    * @return OFCBarHorizontalChartValue 
    */
-  public function CreatesBarHorizontalChartValue($left, $right)
+  public function createBarHorizontalChartValue($left, $right)
   {
     return new OFCBarHorizontalChartValue($left, $right);
   }
@@ -363,7 +390,7 @@ class ChartFactory
    * @param  string $color HEX HTML color format
    * @return OFCBarStackChartValue 
    */
-  public function CreatesBarStackChartValue($val, $color)
+  public function createBarStackChartValue($val, $color)
   {
     return new OFCBarStackChartValue($val, $color);
   }
@@ -376,7 +403,7 @@ class ChartFactory
    * @param int $dot_size
    * @return OFCScatterChartValue 
    */
-  public function CreatesScatterChartValue($x, $y, $dot_size=-1)
+  public function createScatterChartValue($x, $y, $dot_size=-1)
   {
     return new OFCScatterChartValue($x, $y, $dot_size);
   }
@@ -388,7 +415,7 @@ class ChartFactory
    * @param string $label
    * @return OFCPieChartValue 
    */
-  public function CreatesPieChartValue($value, $label)
+  public function createPieChartValue($value, $label)
   {
     return new OFCPieChartValue($value, $label);
   }
@@ -401,7 +428,7 @@ class ChartFactory
    * @param type $delay The delay of the effect animation
    * @param type $distance (onfly for 'PieChartBounce', 'PieChartFade')
    */
-  public function CreatesEffect($effect,  $cascade = 1, $delay = 1, $distance = 0)
+  public function createEffect($effect,  $cascade = 1, $delay = 1, $distance = 0)
   {
     if(!in_array($effect, array('Drop', 'FadeIn', 
                                'GrowDown', 'GrowUp',
@@ -428,7 +455,7 @@ class ChartFactory
    * @param int $value
    * @return style class 
    */
-  public function CreatesStyle($style, $value = null)
+  public function createStyle($style, $value = null)
   {
     if(!in_array($style, array('Anchor', 'Bow', 
                                'Dot', 'SolidDot',

@@ -11,15 +11,15 @@ use WW\OFCBundle\OFC\Charts\OFChart;
  */
 class OFCBarChart extends OFChart
 {
-  protected $type;
-  private $text;
-  private $colour;
-  private $font_size;
-  private $values = array();
-  private $alpha = array();
-  private $tip;
-  private $on_show;
-  private $on_click;
+  public $type;
+  public $text;
+  public $colour;
+  public $font_size;
+  public $values = array();
+  public $alpha = array();
+  public $tip;
+  public $on_show;
+  public $on_click;
   
   public function __construct()
   {

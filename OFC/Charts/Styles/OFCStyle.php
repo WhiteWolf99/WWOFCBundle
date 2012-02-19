@@ -9,15 +9,15 @@ namespace WW\OFCBundle\OFC\Charts\Styles;
  */
 class OFCStyle
 {
-  private $value;
-  private $colour;
-  private $x;
-  private $y;
-  private $tip;
-  private $dot_size;
-  private $halo_size;
-  private $on_click;
-  protected $type;
+  public $value;
+  public $colour;
+  public $x;
+  public $y;
+  public $tip;
+  public $dot_size;
+  public $halo_size;
+  public $on_click;
+  public $type;
  
   function OFCStyle($type, $value=null) {
     

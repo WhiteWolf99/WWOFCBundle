@@ -9,8 +9,8 @@ namespace WW\OFCBundle\OFC\Charts\Effects;
  */
 class OFCPieChartBounceEffect
 {
-  private $type;
-  private $distance;
+  public $type;
+  public $distance;
   
   /**
    * @param int $distance 

@@ -11,9 +11,9 @@ use WW\OFCBundle\OFC\Elements\OFCShapePoint;
  */
 class OFCShape
 {
-  private $type;
-  private $colour;
-  private $values = array();
+  public $type;
+  public $colour;
+  public $values = array();
   
   public function __construct($color)
   {

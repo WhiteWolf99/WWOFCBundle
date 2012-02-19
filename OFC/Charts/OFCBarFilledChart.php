@@ -11,7 +11,7 @@ use WW\OFCBundle\OFC\Charts\OFCBarChart;
  */
 class OFCBarFilledChart extends OFCBarChart
 {
-  private $outline_colour;
+  public $outline_colour;
   
   public function __construct($color = null, $outline_color = null)
   {

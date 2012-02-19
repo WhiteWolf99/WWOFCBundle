@@ -9,13 +9,13 @@ namespace WW\OFCBundle\OFC\Elements;
  */
 class OFCTooltip
 {
-  private $shadow;
-  private $stroke;
-  private $color;
-  private $background;
-  private $title;
-  private $body;
-  private $mouse;
+  public $shadow;
+  public $stroke;
+  public $color;
+  public $background;
+  public $title;
+  public $body;
+  public $mouse;
 
   /**
    * @param $shadow as boolean. Enable drop shadow.

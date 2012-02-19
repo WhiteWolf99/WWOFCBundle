@@ -9,9 +9,9 @@ namespace WW\OFCBundle\OFC\Charts\Values;
  */
 class OFCBarGlassChartValue
 {
-  private $top;
-  private $colour;
-  private $tip;
+  public $top;
+  public $colour;
+  public $tip;
   
   function __construct($top)
   {

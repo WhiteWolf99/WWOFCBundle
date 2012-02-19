@@ -11,8 +11,8 @@ use WW\OFCBundle\OFC\Charts\OFCBarChart;
  */
 class OFCBarSketchChart extends OFCBarChart
 {
-  private $offset;
-  private $outline_colour;
+  public $offset;
+  public $outline_colour;
   
   public function __construct($color, $outline_color, $fun_factor)
   {

@@ -11,11 +11,11 @@ use WW\OFCBundle\OFC\Elements\OFCElement;
  */
 class OFCLabel extends OFCElement
 {
-  private $text;
-  private $colour;
-  private $size;
-  private $rotate;
-  private $visible;
+  public $text;
+  public $colour;
+  public $size;
+  public $rotate;
+  public $visible;
   
   /**
    * Set the text of the label

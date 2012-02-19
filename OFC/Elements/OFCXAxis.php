@@ -11,13 +11,13 @@ use WW\OFCBundle\OFC\Elements\OFCAxis;
  */
 class OFCXAxis extends OFCAxis
 {
-  private $stroke;
-  private $offset;
-  private $labels = array();
-  private $min;
-  private $max;
-  private $tick_height;
-  private $dim3;
+  public $stroke;
+  public $offset;
+  public $labels = array();
+  public $min;
+  public $max;
+  public $tick_height;
+  public $dim3;
   
   /**
    * Set the stroke size

@@ -9,8 +9,8 @@ namespace WW\OFCBundle\OFC\Elements;
  */
 class OFCShapePoint
 {
-  private $x;
-  private $y;
+  public $x;
+  public $y;
   
   public function __construct($x, $y)
   {

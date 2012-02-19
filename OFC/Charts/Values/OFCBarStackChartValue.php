@@ -10,8 +10,8 @@ namespace WW\OFCBundle\OFC\Charts\Values;
 class OFCBarStackChartValue
 {
   
-  private $val;
-  private $colour;
+  public $val;
+  public $colour;
     
   function __construct($val, $color)
   {

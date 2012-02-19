@@ -9,7 +9,7 @@ use WW\OFCBundle\OFC\Elements\OFCElement;
  */
 class OFCXLegend extends OFCElement
 {
-  private $text;
+  public $text;
   
   public function __construct($text)
   {

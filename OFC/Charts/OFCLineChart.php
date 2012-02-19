@@ -11,18 +11,18 @@ use WW\OFCBundle\OFC\Charts\OFChart;
  */
 class OFCLineChart extends OFChart
 {
-  protected $type;
-  private $text;
-  private $colour;
-  private $font_size;
-  private $values = array();
-  private $halo_size;
-  private $dot_size;
-  private $width;
-  private $tip;
-  private $on_click;
-  private $on_show;
-  private $dot_style;
+  public $type;
+  public $text;
+  public $colour;
+  public $font_size;
+  public $values = array();
+  public $halo_size;
+  public $dot_size;
+  public $width;
+  public $tip;
+  public $on_click;
+  public $on_show;
+  public $dot_style;
   
   public function __construct()
   {

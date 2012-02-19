@@ -9,5 +9,7 @@ namespace WW\OFCBundle\OFC\Charts;
  */
 class OFChart
 {
-  
+  public function getJSONEncode() {
+    return json_encode(get_object_vars($this));
+  }
 }

@@ -11,9 +11,9 @@ use WW\OFCBundle\OFC\Elements\OFCElement;
  */
 class OFCAxis extends OFCElement
 {
-  private $colour;
-  private $steps;
-  private $grid_colour;
+  public $colour;
+  public $steps;
+  public $grid_colour;
   
   /**
    * Set the text color of the axis

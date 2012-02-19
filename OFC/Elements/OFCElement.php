@@ -9,7 +9,7 @@ namespace WW\OFCBundle\OFC\Elements;
  */
 class OFCElement
 {
-  private $style;
+  public $style;
   
   /**
    * Set the style of an chart element
