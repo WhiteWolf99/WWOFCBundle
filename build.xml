@@ -46,7 +46,7 @@
 --jdepend-chart=${basedir}/build/pdepend/dependencies.svg
 --overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg
 --exclude=${ignore}
-${source}" />
+'${source}'" />
     </exec>
   </target>
  
